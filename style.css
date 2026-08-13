@@ -1,0 +1,42 @@
+body{
+    background-color: #FCBC03;
+    align-items: center;
+}
+
+.card {
+    margin:auto;
+
+    padding: 40px;
+    background-color: #612936;
+    width: 600px;
+    border-radius: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #FCBC03;
+    text-align: center;
+}
+
+.card h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.card p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+    
+
+.card button {
+    cursor: pointer;
+    height: 70px;
+    width: 300px;
+    background-color: #FCBC03;
+    color: #612936;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    font-size: 20px
+}
