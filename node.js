@@ -3,17 +3,21 @@ const mais = document.getElementById("mais");
 const menos = document.getElementById("menos");
 const zero = document.getElementById("zero");
 const biscoito = document.getElementById("biscoito");
-const Compra_click = document.getElementById("Compra_click");
+const compra_click = document.getElementById("compra_click");
 const valorElemento = document.getElementById("valor");
-const Compra_factory = document.getElementById("Compra_factory");
-const N_factorys = document.getElementById("N_factorys");
+const compra_factory = document.getElementById("compra_factory");
+const n_factorys = document.getElementById("n_factorys");
 
 let numero = 0;
+//Click de valor
 let valor = 1;
 let preco_click = 10;
+//fabrica 
 let factory = 0;
-let preco_factory = 1000;
-let producao_factory = 5;
+let preco_factory = 500;
+let producao_factory = 50;
+let fabricas = 0;
+
 
 
 
@@ -40,28 +44,31 @@ zero.addEventListener("click", function() {
 });
 
 
-Compra_click.addEventListener("click", function() {
+compra_click.addEventListener("click", function() {
     if(numero>=preco_click){
         numero-=preco_click;
         valor++
         preco_click+=20;
         valorElemento.textContent = valor;
         contador.textContent = numero;
-        Compra_click.textContent = preco_click;
+        compra_click.textContent = preco_click;
     }else{
         alert("Você não tem dinheiro o suficiente")
     }
 });
 
-Compra_factory.addEventListener("click", function() {
+compra_factory.addEventListener("click", function() {
     if(numero>=preco_factory){
         numero-=preco_factory;
         factory++
-        preco_factory+=1000;
+        preco_factory+=500;
+        if (factory >= 1) {
+        document.getElementById("fabrica").classList.add("fabrica-balançando");
+        }
 
-        N_factorys.textContent = factory;
+        n_factorys.textContent = factory;
         contador.textContent = numero;
-        Compra_factory.textContent = preco_factory;
+        compra_factory.textContent = preco_factory;
     }else{
         alert("Você não tem dinheiro o suficiente")
     }
